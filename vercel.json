@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",           // Match all incoming requests
-      "dest": "/index.js"       // Route them to the server
+      "dest": "/server.js"       // Route them to the server
     }
   ],
   "env": {
