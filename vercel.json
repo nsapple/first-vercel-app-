@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/proxy", "destination": "/api/proxy" }
+  "builds": [
+    {
+      "src": "index.js",    // Main entry file for your server (adjust if different)
+      "use": "@vercel/node"  // Use Vercel's Node.js serverless environment
+    }
   ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "routes": [
+    {
+      "src": "/(.*)",           // Match all incoming requests
+      "dest": "/index.js"       // Route them to the server
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"  // Set the environment to production
+  },
+  "functions": {
+    "index.js": {
+      "memory": 1024,           // Allocate 1 GB of memory for the serverless function
+      "maxDuration": 10         // Set the maximum duration for the function (in seconds)
+    }
+  }
 }
