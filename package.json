@@ -4,7 +4,7 @@
   "description": "A Node.js proxy server deployed on Vercel",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",  // Command to run the proxy server locally
+    "start": "node server.js",  // Command to run the proxy server locally
     "dev": "vercel dev",       // Command to start the Vercel development environment locally
     "deploy": "vercel --prod"  // Command to deploy to Vercel
   },
