@@ -4,12 +4,6 @@
     { "source": "/search", "destination": "/api/search" },
     { "source": "/proxy", "destination": "/api/proxy" }
   ],
-  "functions": {
-    "api/*.js": {
-      "runtime": "nodejs18.x",
-      "maxDuration": 10
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
